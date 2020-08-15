@@ -1,6 +1,7 @@
-#!/usr/bin/env python
+#Author: TAQI RAZA, CCNP CERTIFIED, NETWORK AUTOMATION ENGINEER
+#COPYRIGHT @2020
 
-#TAQI RAZA
+#!/usr/bin/env python
 
 from netmiko import ConnectHandler
 import mysql.connector
