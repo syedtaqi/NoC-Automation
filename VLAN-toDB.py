@@ -114,21 +114,22 @@ if DELVLN == "Y" :
                 Del_Vlan_DB.close()
 
         dataD = pd.read_csv('/home/VlanAutomation/DeletedVlans.txt', skiprows=[2], names =['VLANS'])
-#       data.columns = [ "VLAN","NAME", "STATUS"]
-        print("Printing DataFrame")
+
+
 
 # bydefault splitting is done on the basis of single space.
         dataintocolumnsD = dataD.VLANS.str.split(expand=True)
-        dataintocolumnsD.columns["VLAN" , "NAME", "STATUS", "PORT"]
-        print(dataintocolumnsD)
+#       dataintocolumnsD.columns["VLAN" , "NAME", "STATUS", "PORT"]
+#        print(dataintocolumnsD)
 
 
  #creating engine:
+        print("Updating Database...")
 
         engine = create_engine("mysql+pymysql://{user}:{pw}@{host}/{db}"
                                 .format(host=hostname, db=dbname, user=uname, pw=pwd))
 
-        dataintocolumnsD.to_sql('VLANS', engine, if_exists = 'replace',index=False)
+        dataintocolumnsD.to_sql('VLANS', engine, if_exists = 'replace', index=False)
 
 
 
@@ -137,5 +138,7 @@ elif DELVLN =="N" :
 
 else :
     print ("Non")
+
+
 
 
