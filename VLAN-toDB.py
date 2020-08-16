@@ -95,13 +95,13 @@ if DELVLN == "Y" :
         DELVLN2 = raw_input('1. 2-4 or 2. 6-9? ' )
         if DELVLN2 == '1':
                 for b in range (2,5):
-                        print "Deleting Vlans from 2-5"
+                        print "Deleting Vlans from 2-4"
                         config_commands = [ 'no vlan ' + str(b)]
                         output1 = net_connect.send_config_set(config_commands)
                         print output1
         elif DELVLN2 == '2' :
                 for c in range (6,10):
-                        print "Deleting Vlans from 6-10"
+                        print "Deleting Vlans from 6-9"
                         config_commands = ['no vlan ' + str(c)]
                         output2 = net_connect.send_config_set(config_commands)
                         print output2
