@@ -13,7 +13,7 @@
  * NOTICE:  All information contained herein is, and remains
  * the property of STR TECHNOLOGIES and its suppliers,
  * if any.  The intellectual and technical concepts contained
- * herein are proprietary to Adobe Systems Incorporated
+ * herein are proprietary to STR TECHNOLOGIES
  * and its suppliers and may be covered by Canadian
  * patents in process, and are protected by trade secret or copyright law.
  * Dissemination of this information or reproduction of this material
